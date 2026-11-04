@@ -1,45 +1,38 @@
-# Persistência de Dados e Migrações (FastAPI + SQLAlchemy)
+# Persistência de Dados e Migrações
 
-API RESTful com CRUD de tarefas, usando FastAPI, SQLAlchemy, SQLite e migrações com Alembic.
+Atividade da disciplina de APIs e Microsserviços. É uma API de tarefas feita com FastAPI que agora salva os dados em um banco SQLite. O banco é controlado com SQLAlchemy, e a criação da tabela é feita com Alembic.
 
-## Como rodar localmente
+## Como rodar
 
-1. Clone o repositório:
-   ```bash
+1. Baixe o projeto:
+   ```
    git clone https://github.com/iguw/Persistencia-de-Dados-e-Migracoes.git
    cd Persistencia-de-Dados-e-Migracoes
    ```
 
 2. Crie e ative o ambiente virtual:
-   ```powershell
+   ```
    python -m venv venv
    venv\Scripts\activate
    ```
-   No Linux/macOS: `source venv/bin/activate`
 
 3. Instale as dependências:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
-4. Crie o banco de dados aplicando as migrações:
-   ```bash
+4. Crie o banco com a migração:
+   ```
    alembic upgrade head
    ```
 
-5. Inicie o servidor:
-   ```bash
+5. Rode a API:
+   ```
    uvicorn main:app --reload
    ```
 
-6. Acesse a documentação Swagger em http://127.0.0.1:8000/docs
-
-### Usando o VS Code
-
-1. Abra a **pasta do projeto** (`File > Open Folder...`), e não a pasta de cima.
-2. Abra o terminal integrado (`` Ctrl + ` ``) e siga os passos 2 a 5 acima.
-3. Selecione o interpretador: `Ctrl + Shift + P`, **Python: Select Interpreter** e escolha `.\venv\Scripts\python.exe`.
+6. Abra http://127.0.0.1:8000/docs para testar as rotas.
 
 ## Autor
 
-Guilherme Alves ([@iguw](https://github.com/iguw))
+Guilherme Alves - [@iguw](https://github.com/iguw)
